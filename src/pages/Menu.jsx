@@ -53,20 +53,21 @@ const Menu = () => {
       <h1 className="mt-[30px] text-black uppercase font-bold text-[32px]">
         Menu
       </h1>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0, 0.7, 0.5, 1] }}
         className="lg:w-[400px] w-[200px] md:w-[300px] h-[3px] mt-[30px] bg-black"
-      />
-      <div className="flex flex-row h-[30px] mt-[20px] w-full justify-center items-center gap-[30px]">
+      /> */}
+      <div className=" border-[4px] border-[#2B2F33] flex flex-row h-[60px] mt-[20px] rounded-[20px] md:w-[400px] w-[250px] justify-between p-[10px] items-center gap-[30px]">
         <input
-          className=" border-[2px] border-[#2B2F33] rounded-lg p-[5px]"
+          className=" p-[5px] focus:outline-none md:w-full w-[100px]"
           type="text"
+          placeholder="Search here betch"
           value={SearchItem}
           onChange={(e) => setSearchItem(e.target.value)}
         />
-        <BiSearchAlt2 size={30} onClick={SubmitHandle} />
+        <BiSearchAlt2 opacity={0.5} size={30} onClick={SubmitHandle} />
       </div>
       <Filter data={categories} filter_fun={filter_item} />
       <div className="mt-[30px] flex flex-col gap-[30px]">

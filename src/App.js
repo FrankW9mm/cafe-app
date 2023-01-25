@@ -13,9 +13,10 @@ function App() {
    <div>
     <Navbar />
     <Hero/>
-    <CtaMiddle />
+    
     {/* <Products /> */}
     <Insperations_Redesign />
+    <CtaMiddle />
     <Menu />
    </div>
   );

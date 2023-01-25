@@ -14,5 +14,11 @@
     /* background: linear-gradient(to bottom, #1F3933 0%, #1F3933 50%, #323131 50%,
         #323131 100%); */
 }
+.hide{
+    border: none;
+}
+.hide:focus{
+    border: none;
+}
 
 /* #1F3933 */
