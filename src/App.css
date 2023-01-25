@@ -1,0 +1,18 @@
+.bg_overlay{
+    background-image: url(./images/tet.png);
+        background-color: rgba(0, 0, 0, 0.7);
+        background-size: cover;
+        background-position: top center;
+        background-blend-mode: darken;
+}
+.halfcolor{
+    background: linear-gradient(to bottom,
+                #2B2F33 0%,
+                #2B2F33 50%,
+                #323131 50%,
+                #323131 100%);
+    /* background: linear-gradient(to bottom, #1F3933 0%, #1F3933 50%, #323131 50%,
+        #323131 100%); */
+}
+
+/* #1F3933 */
