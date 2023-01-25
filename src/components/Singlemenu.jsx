@@ -47,7 +47,7 @@ const Singlemenu = ({ imgUrl, Title, Price, desc, category }) => {
         whileTap={{ scale: 0.8 }}
         className="w-[150px] h-[50px] bg-white rounded-[25px] border-black border-[1px] hover:bg-[#1F3933] hover:border-none hover:text-white"
       >
-        Get your own
+        Add to Cart
       </motion.button>
     </div>
   );

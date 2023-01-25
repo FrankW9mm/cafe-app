@@ -10,7 +10,6 @@ import { useEffect } from "react";
 const Menu = () => {
   const [Items, SetItmes] = useState(menu_Tea);
   const [SearchItem, setSearchItem] = useState("");
-
   useEffect(() => {
     if (SearchItem) {
       const newSearch = menu_Tea.filter((menu) =>
@@ -21,7 +20,6 @@ const Menu = () => {
       SetItmes(menu_Tea);
     }
   }, [SearchItem]);
-
   const SubmitHandle = (e) => {
     e.preventDefault();
     console.log(SearchItem);
