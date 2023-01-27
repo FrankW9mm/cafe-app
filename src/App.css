@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
 .bg_overlay{
     background-image: url(./images/tet.png);
         background-color: rgba(0, 0, 0, 0.7);
@@ -19,6 +20,9 @@
 }
 .hide:focus{
     border: none;
+}
+.title_font{
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 /* #1F3933 */

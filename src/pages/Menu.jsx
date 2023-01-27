@@ -49,10 +49,13 @@ const Menu = () => {
 
   console.log(typeof categories);
   return (
-    <div className=" flex flex-col items-center" id="menu">
-      <h1 className="mt-[30px] text-black uppercase font-bold text-[32px]">
-        Menu
+    <div className=" flex flex-col items-center relative" id="menu">
+      <h1 className="mt-[30px] title_font text-[#2B2F33] uppercase font-[600] text-[50px]">
+        Our Menu
       </h1>
+      {/* <div className=" absolute w-[200px] h-[50px] top-2 bg-[#1F3933] ">
+        <h1>Hello</h1>
+      </div> */}
       {/* <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -63,7 +66,7 @@ const Menu = () => {
         <input
           className=" p-[5px] focus:outline-none md:w-full w-[100px]"
           type="text"
-          placeholder="Search here betch"
+          placeholder="Search here"
           value={SearchItem}
           onChange={(e) => setSearchItem(e.target.value)}
         />
@@ -72,8 +75,11 @@ const Menu = () => {
       <Filter data={categories} filter_fun={filter_item} />
       <div className="mt-[30px] flex flex-col gap-[30px]">
         {Items.length < 1 ? (
-          <div className="flex flex-colum justify-center items-center  w-[250px] h-[250px]">
-            <p className="text-[20px]">T-T Not Found...</p>
+          <div className="flex flex-col justify-center items-center shadow-lg rounded-[20px] md:w-[500px] w-[300px] h-[250px]">
+            <p className="text-[20px] text-[#2B2F33]">T-T</p>
+            <p className="text-[20px] text-[#2B2F33]">
+              Your Search was not found
+            </p>
           </div>
         ) : (
           <div>

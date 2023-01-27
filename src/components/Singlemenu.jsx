@@ -6,20 +6,22 @@ const Singlemenu = ({ imgUrl, Title, Price, desc, category }) => {
   const [show, setShow] = useState(false);
   return (
     <div className="flex lg:flex-row flex-col lg:items-center md:items-start gap-[30px] shadow-md p-[40px] rounded-[20px] ">
-      <div className="w-[200px] h-[200px] ">
+      <motion.div whileHover={{ scale: 1.05 }} className="w-[200px] h-[200px] ">
         <img
           src={imgUrl}
           alt={Title}
           className=" w-full h-full object-contain rounded-[20px] "
         />
-      </div>
+      </motion.div>
       <div className="flex flex-col lg:max-w-[600px] max-w-[500px]">
-        <h1 className="text-[23px] font-bold">
+        <h1 className="text-[23px] font-bold text-[#2B2F33]">
           {Title} <span className=" font-light text-[18px]">({category})</span>
         </h1>
-        <samp className="mt-[10px] text-[20px]">Price- ${Price}</samp>
+        <samp className="mt-[10px] text-[#2B2F33] text-[20px]">
+          Price- ${Price}
+        </samp>
         {show ? (
-          <samp className="mt-[10px]">
+          <samp className="mt-[10px] text-[#2B2F33]">
             {desc}
             <span
               onClick={() => setShow(!show)}
