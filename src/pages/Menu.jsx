@@ -6,8 +6,12 @@ import { useState } from "react";
 import Filter from "../components/Filter";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Menu = () => {
+  console.log(menu_Tea);
+  AOS.init();
   const [Items, SetItmes] = useState(menu_Tea);
   const [SearchItem, setSearchItem] = useState("");
   useEffect(() => {
@@ -50,7 +54,10 @@ const Menu = () => {
   console.log(typeof categories);
   return (
     <div className=" flex flex-col items-center relative" id="menu">
-      <h1 className="mt-[30px] title_font text-[#2B2F33] uppercase font-[600] text-[50px]">
+      <h1
+        data-aos="fade-up"
+        className="mt-[30px] title_font text-[#2B2F33] uppercase font-[600] text-[50px]"
+      >
         Our Menu
       </h1>
       {/* <div className=" absolute w-[200px] h-[50px] top-2 bg-[#1F3933] ">
@@ -82,11 +89,11 @@ const Menu = () => {
             </p>
           </div>
         ) : (
-          <div>
+          <>
             {Items.map((data, index) => {
               return <Singlemenu {...data} key={index} />;
             })}
-          </div>
+          </>
         )}
         {/* {Items.map((data, index) => {
           return <Singlemenu {...data} key={index} />;

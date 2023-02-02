@@ -7,6 +7,7 @@ import CtaMiddle from './pages/CtaMiddle';
 import Products from './pages/Products';
 import Menu from './pages/Menu';
 import Insperations_Redesign from './pages/Insperations_Redesign';
+import Location from './pages/Location';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Insperations_Redesign />
     <CtaMiddle />
     <Menu />
+    <Location />
    </div>
   );
 }

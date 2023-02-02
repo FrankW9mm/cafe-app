@@ -5,7 +5,13 @@ import { useState } from "react";
 const Singlemenu = ({ imgUrl, Title, Price, desc, category }) => {
   const [show, setShow] = useState(false);
   return (
-    <div className="flex lg:flex-row flex-col lg:items-center md:items-start gap-[30px] shadow-md p-[40px] rounded-[20px] ">
+    <div
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      data-aos-once="true"
+      className="flex lg:flex-row flex-col lg:items-center md:items-start gap-[30px] shadow-md p-[40px] rounded-[20px] "
+    >
       <motion.div whileHover={{ scale: 1.05 }} className="w-[200px] h-[200px] ">
         <img
           src={imgUrl}

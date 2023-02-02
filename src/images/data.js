@@ -13,6 +13,10 @@ import EspressoFrappuccino from './EspressoFrappuccino.jpg'
 import MachaFrappuccino from './machaFrappuccino.jpg'
 import MochaFrappuccino from './mochaFrappuccino.jpg'
 
+import NewYork from "./location3.jpg"
+import LA from "./location2.jpg"
+import Paris from "./location1.jpg"
+
 const menu_Tea = [
     {
         imgUrl:Chai,
@@ -100,5 +104,27 @@ const menu_Tea = [
     },
 
 ]
+
+export const location_data = [
+    {
+        id:0,
+        title: "Paris",
+        imgUrl: Paris,
+        address:" NE Saint Capulla 23th"
+    },
+    {   
+        id:1,
+        title: "New York",
+        imgUrl: NewYork,
+        address:" 28th SW City Square 3rd Block"
+    },
+    {
+        id:2,
+        title: "Los Angeles",
+        imgUrl: LA,
+        address:"5th floor street SE Town Square Mall"
+    },
+]
+
 
 export default menu_Tea;
