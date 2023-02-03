@@ -82,7 +82,7 @@ const Menu = () => {
       <Filter data={categories} filter_fun={filter_item} />
       <div className="mt-[30px] flex flex-col gap-[30px]">
         {Items.length < 1 ? (
-          <div className="flex flex-col justify-center items-center shadow-lg rounded-[20px] md:w-[500px] w-[300px] h-[250px]">
+          <div className=" flex flex-col justify-center items-center shadow-lg rounded-[20px] md:w-[500px] w-[300px] h-[250px]">
             <p className="text-[20px] text-[#2B2F33]">T-T</p>
             <p className="text-[20px] text-[#2B2F33]">
               Your Search was not found
