@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import images from "../images/index";
 import { motion } from "framer-motion";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-const navbar = () => {
+const Navbar = () => {
+  const [show, setShow] = useState(false);
   return (
-    <div className="flex flex-col bg_overlay ">
-      <div className=" flex flex-row justify-between px-[60px] py-[20px] items-center ">
-        <div className="flex w-[100px] h-[100px]">
+    <div className="flex flex-col bg_overlay">
+      <div className=" flex flex-row justify-between md:px-[60px] px-[20px] py-[20px] items-center">
+        {/* <div className="flex w-[100px] h-[100px] items-center">
           <img
             src={images.img1}
             alt="logo"
             className=" w-full h-full object-contain"
           />
+         
+        </div> */}
+        <div className="flex items-center">
+          <h1 className="text-white font-normal text-[38px] font-title">
+            La Cafarina
+          </h1>
         </div>
+
         {/*  */}
-        <div className="flex flex-row justify-end gap-8">
+        <div className="app__nav flex flex-row justify-end gap-8">
           <motion.a
             href="#menu"
             whileHover={{ scale: 1.2 }}
@@ -24,13 +33,22 @@ const navbar = () => {
             Menu
           </motion.a>
           {/*  */}
-          <motion.h3
+          <motion.a
+            href="#location"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
             className=" text-white cursor-pointer hover:border-b-2 transistion-all ease-out duration-[0.1s]"
           >
             locations
-          </motion.h3>
+          </motion.a>
+          <motion.a
+            href="#about"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            className=" text-white cursor-pointer hover:border-b-2 transistion-all ease-out duration-[0.1s]"
+          >
+            About us
+          </motion.a>
           {/*  */}
           <motion.h3
             whileHover={{ scale: 1.2 }}
@@ -40,8 +58,68 @@ const navbar = () => {
             Contact
           </motion.h3>
         </div>
-        {/*  */}
+        <div className="mb__icon">
+          <AiOutlineMenu
+            onClick={() => setShow(!show)}
+            color="white"
+            size={50}
+          />
+        </div>
+        {/* Mobile Nav */}
+        {show && (
+          <div className="mb__nav absolute right-0 top-[0] p-3 bg-[#2B2F33] flex flex-col justify-evenly w-[200px] items-center h-[250px] ">
+            <AiOutlineClose
+              onClick={() => setShow(!show)}
+              color="white"
+              size={25}
+            />
+            <a
+              className="text-white w-full text-center hover:bg-[#60676d]"
+              href="#menu"
+            >
+              Menu
+            </a>
+            <a
+              className="text-white w-full text-center hover:bg-[#60676d]"
+              href="#location"
+            >
+              locations
+            </a>
+            <a
+              className="text-white w-full text-center hover:bg-[#60676d]"
+              href="#about"
+            >
+              About us
+            </a>
+            <a
+              className="text-white w-full text-center hover:bg-[#60676d]"
+              href=""
+            >
+              Contact
+            </a>
+          </div>
+        )}
+        {/* <div className="mb__nav absolute right-0 top-[0] p-3 bg-[#2B2F33] flex flex-col justify-evenly w-[200px] items-center h-[250px] ">
+          <AiOutlineClose
+            onClick={() => setShow(!show)}
+            color="white"
+            size={25}
+          />
+          <a className="text-white" href="">
+            Menu
+          </a>
+          <a className="text-white" href="">
+            locations
+          </a>
+          <a className="text-white" href="">
+            About us
+          </a>
+          <a className="text-white" href="">
+            Contact
+          </a>
+        </div> */}
       </div>
+
       <div className="flex justify-center items-center h-[50vh] w-full">
         <div className="flex flex-col items-center justify-center">
           <motion.div
@@ -80,4 +158,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+
+
+
 .bg_overlay{
     background-image: url(./images/tet.png);
         background-color: rgba(0, 0, 0, 0.7);
@@ -24,5 +27,19 @@
 .title_font{
     font-family: 'Nunito Sans', sans-serif;
 }
+
+.mb__icon{
+    display: none;
+}
+
+@media screen and (max-width:730px) {
+    .app__nav{
+        display: none;
+    }
+    .mb__icon{
+        display: block;
+    }
+}
+
 
 /* #1F3933 */

@@ -8,18 +8,22 @@ import Products from './pages/Products';
 import Menu from './pages/Menu';
 import Insperations_Redesign from './pages/Insperations_Redesign';
 import Location from './pages/Location';
+import About from './pages/About';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  AOS.init();
   return (
    <div>
     <Navbar />
     <Hero/>
-    
     {/* <Products /> */}
     <Insperations_Redesign />
     <CtaMiddle />
     <Menu />
     <Location />
+    <About/>
    </div>
   );
 }

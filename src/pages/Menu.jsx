@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 
 const Menu = () => {
   console.log(menu_Tea);
-  AOS.init();
+
   const [Items, SetItmes] = useState(menu_Tea);
   const [SearchItem, setSearchItem] = useState("");
   useEffect(() => {
@@ -56,10 +56,11 @@ const Menu = () => {
     <div className=" flex flex-col items-center relative" id="menu">
       <h1
         data-aos="fade-up"
-        className="mt-[30px] title_font text-[#2B2F33] uppercase font-[600] text-[50px]"
+        className="mt-[30px] title_font text-[#2B2F33] uppercase text-[36px] font-semibold"
       >
-        Our Menu
+        The Menu
       </h1>
+
       {/* <div className=" absolute w-[200px] h-[50px] top-2 bg-[#1F3933] ">
         <h1>Hello</h1>
       </div> */}
@@ -69,7 +70,7 @@ const Menu = () => {
         transition={{ duration: 1, ease: [0, 0.7, 0.5, 1] }}
         className="lg:w-[400px] w-[200px] md:w-[300px] h-[3px] mt-[30px] bg-black"
       /> */}
-      <div className=" border-[4px] border-[#2B2F33] flex flex-row h-[60px] mt-[20px] rounded-[20px] md:w-[400px] w-[250px] justify-between p-[10px] items-center gap-[30px]">
+      <div className="border-[4px] border-[#2B2F33] flex flex-row h-[60px] mt-[20px] rounded-[20px] md:w-[400px] w-[250px] justify-between p-[10px] items-center gap-[30px]">
         <input
           className=" p-[5px] focus:outline-none md:w-full w-[100px]"
           type="text"

@@ -127,4 +127,23 @@ export const location_data = [
 ]
 
 
+export const AboutData = [
+    {
+        id:'0',
+        title:'The day we start',
+        text:'The Cafe 1932 is a charming coffee shop that has been serving the community since 1932. Located in the heart of the city, it has been a favorite among locals and tourists alike, providing a warm and cozy atmosphere for everyone who enters its doors. Over the years, Cafe 1932 has become known for its delicious coffee, baked goods, and sandwiches. The coffee is brewed with care, using only the finest beans, and is a perfect way to start your day or pick you up mid-afternoon.'
+    },
+    {
+        id:'1',
+        title:'Famous for',
+        text:'The interior of the cafe is just as warm and inviting as the coffee. The walls are adorned with vintage posters and photographs, giving the place a nostalgic feel. There are comfortable booths and tables, each with its own unique character, and the baristas are always ready to make you feel at home. Whether you’re looking for a place to catch up with friends, work on your laptop, or just relax and enjoy a good book, Cafe 1932 is the perfect destination.'
+    },
+    {
+        id:'2',
+        title:'The Quality Times',
+        text:'In addition to its coffee and atmosphere, Cafe 1932 is also famous for its live music events. Every Saturday night, local musicians take the stage, providing the soundtrack for a night of good food, drink, and conversation. From blues and jazz to folk and rock, there is always something for everyone, and the crowd is always lively and friendly. If you’re looking for a unique dining experience, Cafe 1932 is the place to be. So why not come and pay a visit to this historic cafe, and see why it’s been a staple of the city for over 90 years.'
+    }
+]
+
+
 export default menu_Tea;

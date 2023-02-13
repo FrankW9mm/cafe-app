@@ -9,7 +9,10 @@ const Location = () => {
 
   const { title, imgUrl, id, address } = location[index];
   return (
-    <div className="mt-[100px] flex flex-col md:p-[60px] p-[10px] bg-[#2B2F33] ">
+    <div
+      id="location"
+      className="mt-[100px] flex flex-col md:p-[60px] p-[10px] bg-[#2B2F33] "
+    >
       <div className="p-[20px]">
         <h1 className="font-bold text-white uppercase text-[26px]">
           | Our Locations
@@ -17,13 +20,19 @@ const Location = () => {
       </div>
 
       <div className="lg:mt-0 mt-[30px] flex lg:flex-row flex-col-reverse items-center justify-evenly ">
-        <div className="flex flex-col md:h-[500px] h-[300px] justify-evenly items-start ">
+        <div className="flex flex-col md:h-[500px] h-[300px] justify-start items-start ">
           {location.map((data, index) => {
             return (
               <div
                 onClick={() => setIndex(index)}
-                className="  flex flex-row items-center md:gap-[20px] gap-[10px] cursor-pointer"
+                className="  flex flex-row items-end md:gap-[20px] gap-[10px] cursor-pointer"
               >
+                <div className="flex flex-col justify-center items-center">
+                  <div className="h-[50px] md:h-[100px] w-[1px] bg-white"></div>
+                  <div className="border-[1px] rounded-full md:p-[10px] p-[5px]">
+                    <p className=" text-white  ">{index + 1}</p>
+                  </div>
+                </div>
                 <motion.h1
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.8 }}
@@ -31,10 +40,6 @@ const Location = () => {
                 >
                   {data.title}
                 </motion.h1>
-                <div className="w-[200px] md:flex hidden h-[1px] bg-white" />
-                <div className="border-[1px] rounded-full md:p-[10px] p-[5px]">
-                  <p className=" text-white md:block hidden ">{index + 1}</p>
-                </div>
               </div>
             );
           })}

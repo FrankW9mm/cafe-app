@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Filter = ({ data, filter_fun }) => {
   console.log(filter_fun);
   return (
-    <div className="flex flex-row md:w-[50%] w-full gap-[30px] flex-wrap md:justify-evenly justify-center items-center mt-[40px]">
+    <div className=" flex flex-row md:w-[50%] w-full gap-[30px] flex-wrap md:justify-evenly justify-center items-center mt-[40px]">
       {data.map((data, index) => {
         return (
           <motion.div
