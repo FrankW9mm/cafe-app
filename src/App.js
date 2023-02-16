@@ -9,6 +9,7 @@ import Menu from './pages/Menu';
 import Insperations_Redesign from './pages/Insperations_Redesign';
 import Location from './pages/Location';
 import About from './pages/About';
+import Contact from './pages/Contact';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -23,7 +24,8 @@ function App() {
     <CtaMiddle />
     <Menu />
     <Location />
-    <About/>
+    {/* <About/> */}
+    <Contact />
    </div>
   );
 }

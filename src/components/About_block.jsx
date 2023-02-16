@@ -9,10 +9,10 @@ const About_block = ({ title, text }) => {
       // data-aos-offset="300"
       // data-aos-easing="ease-in-sine"
       // data-aos-once="false"
-      className={`flex flex-col justify-top md:w-[60%] w-full h-auto p-[30px] overflow-hidden bg-[#323131] rounded-[20px]`}
+      className={`flex flex-col justify-top md:w-[60%] w-full  p-[30px] overflow-hidden bg-[#323131] hover:bg-[#444444] rounded-[20px]`}
     >
       <h1 className="text-white text-[28px] font-bold">{title}</h1>
-      <div className="w-[250px] h-[2px] bg-white"></div>
+      {/* <div className="w-[250px] h-[2px] bg-white"></div> */}
       <p
         className={` indent-6 text-white text-justify mt-[10px] lg:text-[14px] md:text-[12px] text-[10px] transistion-[all] duration-[0.7s] ease-out-flex  ${
           show ? `hidden` : `flex`
